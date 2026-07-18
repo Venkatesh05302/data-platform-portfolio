@@ -1,0 +1,15 @@
+{"query_id": "q01", "query": "what causes shuffle skew in Spark and how do you fix it?", "relevant_doc_ids": ["spark-02", "spark-03", "spark-09"]}
+{"query_id": "q02", "query": "explain adaptive query execution", "relevant_doc_ids": ["spark-03", "spark-07"]}
+{"query_id": "q03", "query": "difference between bucketing and partitioning", "relevant_doc_ids": ["spark-05"]}
+{"query_id": "q04", "query": "how does Delta Lake achieve ACID on object storage?", "relevant_doc_ids": ["delta-01", "delta-07"]}
+{"query_id": "q05", "query": "iceberg schema evolution and renaming columns", "relevant_doc_ids": ["delta-06", "delta-02"]}
+{"query_id": "q06", "query": "compact small files in a lakehouse table", "relevant_doc_ids": ["delta-03", "delta-08", "cost-04"]}
+{"query_id": "q07", "query": "guarantee ordering across a Kafka topic", "relevant_doc_ids": ["kafka-01", "kafka-02"]}
+{"query_id": "q08", "query": "exactly-once semantics in streaming pipelines", "relevant_doc_ids": ["kafka-03", "cdc-03"]}
+{"query_id": "q09", "query": "kinesis vs kafka on aws for high throughput", "relevant_doc_ids": ["kafka-07", "kafka-01"]}
+{"query_id": "q10", "query": "how do we cut redshift costs", "relevant_doc_ids": ["cost-02", "cost-07", "cost-09"]}
+{"query_id": "q11", "query": "avoid duplicate writes when a service publishes to kafka", "relevant_doc_ids": ["kafka-10", "cdc-05"]}
+{"query_id": "q12", "query": "cdc from postgres into a data lake", "relevant_doc_ids": ["cdc-01", "cdc-02", "cdc-06"]}
+{"query_id": "q13", "query": "declarative data quality tests in dbt", "relevant_doc_ids": ["dq-02", "dq-05", "orch-04"]}
+{"query_id": "q14", "query": "when to pick lambda architecture vs kappa in 2026", "relevant_doc_ids": ["sd-02"]}
+{"query_id": "q15", "query": "what time is dinner tonight", "relevant_doc_ids": []}

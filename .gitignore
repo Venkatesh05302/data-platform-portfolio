@@ -1,0 +1,133 @@
+# =====================================================================
+# .gitignore — data-platform-portfolio
+# Rule: if a script or `pip install` can regenerate it, don't commit it.
+# =====================================================================
+
+# ------------- Python ------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments (never commit — regenerable from requirements.txt)
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+pip-wheel-metadata/
+
+# Test / coverage / type-check caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+
+# ------------- Jupyter ----------------------------------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+# Uncomment the next line ONLY if you want to strip notebook outputs from git
+# (many teams use nbstripout to enforce this — good practice for large notebooks)
+# **/*.ipynb
+
+# ------------- Secrets & credentials --------------------------------
+# NEVER commit these. If you accidentally do, rotate the key immediately.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+config.local.*
+secrets/
+
+# ------------- Data & model artifacts -------------------------------
+# Rule: derived data (script output) should NOT be committed.
+# Source/input data (corpus.jsonl, eval_queries.jsonl) IS committed.
+
+# Lab 01 derived artifacts
+labs/01-embeddings-semantic-search/data/chunks.jsonl
+labs/01-embeddings-semantic-search/data/vectors.npy
+labs/01-embeddings-semantic-search/data/vectors.faiss
+labs/01-embeddings-semantic-search/data/meta.parquet
+labs/01-embeddings-semantic-search/data/*.parquet
+
+# General derived-data patterns (for future labs)
+**/artifacts/
+**/checkpoints/
+**/*.faiss
+**/*.npy
+**/*.npz
+**/*.pt
+**/*.pth
+**/*.bin
+**/*.safetensors
+**/models_cache/
+**/.cache/
+
+# ------------- IDE / editor -----------------------------------------
+# VS Code — keep shared settings, ignore user-specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+*.code-workspace
+
+# JetBrains (PyCharm, DataGrip)
+.idea/
+*.iml
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+.\#*
+\#*\#
+
+# ------------- OS files ---------------------------------------------
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.nfs*
+
+# ------------- Logs & runtime ---------------------------------------
+logs/
+*.log
+*.log.*
+pip-log.txt
+
+# ------------- Local scratch ----------------------------------------
+scratch/
+tmp/
+tmp_*
+sandbox/

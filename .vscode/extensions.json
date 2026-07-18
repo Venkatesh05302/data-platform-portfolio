@@ -1,0 +1,12 @@
+{
+  "// note": "When you open this folder, VS Code offers to install these. Say yes.",
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-toolsai.jupyter",
+    "charliermarsh.ruff",
+    "eamodio.gitlens",
+    "redhat.vscode-yaml",
+    "tamasfe.even-better-toml"
+  ]
+}
