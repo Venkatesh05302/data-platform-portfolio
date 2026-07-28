@@ -131,3 +131,8 @@ scratch/
 tmp/
 tmp_*
 sandbox/
+
+# ------------- One-time setup scripts -------------------------------
+# scripts/ contains machine-setup scripts that may reference corporate
+# identifiers (work email, hostnames). Keep them local; never commit.
+scripts/
