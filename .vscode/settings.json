@@ -1,6 +1,8 @@
 {
   "// note": "Shared VS Code settings for the repo. User-specific settings go in User Settings, not here.",
 
+  "python.defaultInterpreterPath": "${workspaceFolder}/labs/01-embeddings-semantic-search/.venv/bin/python",
+  "python.terminal.activateEnvironment": true,
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.autoImportCompletions": true,
 
@@ -36,5 +38,6 @@
     "**/*.npy": true
   },
 
-  "jupyter.notebookFileRoot": "${workspaceFolder}"
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "python-envs.defaultEnvManager": "ms-python.python:system"
 }

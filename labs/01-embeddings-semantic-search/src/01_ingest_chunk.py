@@ -35,8 +35,8 @@ CHUNKS_PATH = LAB_ROOT / "data" / "chunks.jsonl"
 # most docs to split into 2–3 chunks so you actually see the chunker at work.
 # For long-form corpora (articles, docs, transcripts) 200–400 tokens is more
 # typical.
-CHUNK_SIZE_TOKENS = 32
-CHUNK_OVERLAP_TOKENS = 8
+CHUNK_SIZE_TOKENS = 128
+CHUNK_OVERLAP_TOKENS = 0
 
 
 def chunk_text(text: str, size: int, overlap: int) -> Iterator[str]:
@@ -57,7 +57,7 @@ def chunk_text(text: str, size: int, overlap: int) -> Iterator[str]:
     if step <= 0:
         raise ValueError("overlap must be smaller than size")
     for start in range(0, len(tokens), step):
-        window = tokens[start:start + size]
+        window = tokens[start : start + size]
         if not window:
             break
         yield " ".join(window)
@@ -101,7 +101,9 @@ def main() -> None:
     print(f"Docs ingested: {n_docs}")
     print(f"Chunks written: {n_chunks} → {CHUNKS_PATH.name}")
     print(f"Avg chunks per doc: {n_chunks / max(n_docs, 1):.2f}")
-    print(f"Config: chunk_size={CHUNK_SIZE_TOKENS} tokens, overlap={CHUNK_OVERLAP_TOKENS} tokens")
+    print(
+        f"Config: chunk_size={CHUNK_SIZE_TOKENS} tokens, overlap={CHUNK_OVERLAP_TOKENS} tokens"
+    )
 
 
 if __name__ == "__main__":
